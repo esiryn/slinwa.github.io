@@ -1,0 +1,133 @@
+body *{
+    animation: shake 1.5s infinite;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(4, 255, 0), rgb(0, 0, 255), rgb(255, 0, 162));
+    color: rgb(226, 166, 166);
+    padding-bottom: 47px;
+    padding-right: 69px;
+    text-transform: uppercase;
+    font-style: italic;
+    outline: 4px blueviolet;
+    filter: blur(.9px);
+    background-size: 300% 100%;
+    animation: blind 5s infinite;
+    animation: owEyes .5s infinite;
+}
+
+h1{
+    text-align: right;
+    padding-right: 43px;
+}
+
+h2{
+    padding-bottom: 50px;
+}
+
+ol{
+    color:white;
+}
+
+img{
+    animation: spin .2s linear infinite;
+}
+
+p:nth-child(odd){
+    transform: rotate(-2deg);
+    word-spacing: 50px;
+    text-align: right;
+    cursor: progress;
+    animation-delay: .5s;
+}
+
+p:nth-child(even){
+    font-family: 'Brush Script MT', cursive, sans-serif;
+    letter-spacing: 9px;
+    transform: rotate(6deg);
+    text-align: left;
+    cursor: not-allowed;
+    animation-delay: .314s;
+}
+
+.descript{
+    background: rgb(0, 255, 89,.5);
+    color: yellow;
+    align-items: center;
+    justify-content: right;
+    font-family: 'Brush Script MT', cursive, sans-serif;
+    padding-left: 50%;
+    display: inline-block;
+    transform: rotate(20deg);
+    width: 250px;
+    animation: byeBye2 .6s linear infinite;
+}
+
+.anecdote{
+    animation: changeColor 1.5s infinite;
+    animation: byeBye .5s linear infinite;
+    color: yellow;
+    text-shadow: 5px 5px 0 black;
+    background-color: blueviolet;
+
+}
+
+.fun-facts{
+    animation: byeBye2 1s linear infinite;
+    background-color: aqua;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+@keyframes shake {
+    0% {transform: translate(0px,0px) rotate(0deg);}
+    25% {transform: translate(5px,5px) rotate(5deg);}
+    50% {transform: translate(-2px,7px) rotate(-5deg);}
+    75% {transform: translate(1px,-3px) rotate(5deg);}
+    100% {transform: translate(0px,0px) rotate(0deg);}
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes changeColor {
+    0% {color: red;}
+    33.33% {color: yellow;}
+    66.66% {color: green;}
+    85.99% {color: blue;}
+    100% {color: rebeccapurple;}
+}
+
+@keyframes byeBye {
+    0% {transform: translateX(0);
+    opacity: 1;}
+    50% {transform: translate(200vw);
+    opacity: 0;}
+    100% {transform:translateX(0);
+    opacity: 1;}
+}
+
+@keyframes byeBye2 {
+    0% {transform: translateX(0);
+    opacity: 1;}
+    50% {transform: translate(-200vw);
+    opacity: 0;}
+    100% {transform:translateX(0);
+    opacity: 1;}
+}
+
+@keyframes blind {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(-1.5);}
+}
+
+@keyframes owEyes {
+    0%, 100% {background-position: 0% 0;}
+    50% {background-position: 100% 0;}
+}
