@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+header {
+    height: 68px;
+    width: 100%;
+    background: #262645;
+    color: white;
+	display: inline-block;
+    align-items: center;
+	font-weight: bold;
+	box-shadow: 0 1px 8px 2px #29364c91;
+}
+
+.s-header {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wrapper {
+	width: 970px;
+	padding: 20px 40px;
+	margin: 0 auto;
+	border: 0px;
+	background: white;
+	box-shadow: 0 5px 8px 2px #29364c91;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #191925;
+    background: #597097;
+	font-size: 20px;
+	line-height: 1.5em;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.wrapper img {
+    width: 550px;
+	display: flex;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.body-text a{
+	color: rgb(102, 81, 172);
+}
+
+.page-nav {
+	text-align: center;
+}
+
+.page-nav a {
+	color: rgb(102, 81, 172);
+}
+
+.site-nav li {
+	display: inline;
+	text-transform: uppercase;
+	list-style: none;
+	padding: 10px 10px;
+	font-size: 25px;
+}
+
+.site-nav a {
+	color: white;
+	padding: 15px;
+}
+
+.site-nav a:visited{	
+	color: inherit;
+}
+
+.site-nav a.active{
+    color:rgb(149, 113, 184);
+    background-color: white;
+}
+
+a:hover {
+	color: rgb(149, 113, 184);
+}
+
+.gallery {
+	width: 970px;
+	display: grid;
+	grid-template-columns: repeat(3, 300px);
+	gap: 30px;
+	justify-content: center;
+	margin: 0 -40px;
+	text-align: center;
+}
+
+.gallery img {
+	width: 300px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 3px 3px #cad4e691;
+}
+
+.gallery figcaption {
+	width: 300px
+}
+
+.c-table{
+	text-align: center;
+	font-size: 16px;
+}
+
+.c-table table{
+	border: 1px solid #191925;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 3px;
+	line-height: 1.15em;
+}
+
+.c-table table th{
+	background-color: #191925;
+	color: white;
+	height: 60px;
+	text-transform: uppercase;
+}
+.c-table table td, th{
+	padding: 0 10px;
+}
+
+.c-table table tr:nth-of-type(even) {
+	background-color: #bad4fa8e;
+}
+
+.c-table table tr, td {
+	height: 50px;
+	overflow: hidden;
+}
+
