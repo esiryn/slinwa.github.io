@@ -2,11 +2,11 @@
 
 header {
     height: 68px;
-    width: 100%;
+    min-width: 100%;
+	max-width: 300%;
     background: #262645;
     color: white;
-	display: inline-block;
-    align-items: center;
+	display: block;
 	font-weight: bold;
 	box-shadow: 0 1px 8px 2px #29364c91;
 }
@@ -62,12 +62,21 @@ a{
 	color: rgb(102, 81, 172);
 }
 
-.site-nav li {
-	display: inline;
+.site-nav {
+	display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    column-gap: 4px;
 	text-transform: uppercase;
-	list-style: none;
-	padding: 10px 10px;
 	font-size: 25px;
+	padding: 4px;
+}
+
+.site-nav a.logo {
+	position: absolute;
+	top: 4px;
+	left: 8px;
 }
 
 .site-nav a {
@@ -75,13 +84,17 @@ a{
 	padding: 15px;
 }
 
-.site-nav a:visited{	
+.site-nav a:visited {	
 	color: inherit;
 }
 
 .site-nav a.active{
     color:rgb(149, 113, 184);
     background-color: white;
+}
+
+.site-nav a:hover{
+	color: rgb(149, 113, 184);
 }
 
 a:hover {
@@ -139,4 +152,28 @@ a:hover {
 	height: 50px;
 	overflow: hidden;
 }
+
+.legend {
+	margin: auto;
+	text-align: center;
+	font-size: 20px;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid #191925;
+	border-radius: 3px;
+}
+
+.legend th {
+	padding: 10px;
+	color: white;
+	background-color: #191925;
+	border: none;
+	text-transform: uppercase;
+}
+
+.legend td {
+	width: 150px;
+	font-size: 16px;
+}
+
 
