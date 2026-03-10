@@ -47,7 +47,6 @@ main {
 }
 h1 {
 	text-align: center;
-	color: #4e2b5e;
 }
 
 a {
@@ -249,8 +248,4 @@ li {
 	padding: 15px;
 	width: 500px;
 	border-radius: 8px;
-}
-
-h1.spec-head {
-	color: white;
 }
