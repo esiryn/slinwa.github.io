@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 header {
-    height: 68px;
+    height: 80px;
     min-width: 100%;
 	max-width: 300%;
     background: #262645;
@@ -18,6 +18,7 @@ header {
 
 .wrapper {
 	width: 970px;
+	max-width: 1000px;
 	padding: 20px 40px;
 	margin: 0 auto;
 	border: 0px;
@@ -33,25 +34,29 @@ body {
 	font-size: 20px;
 	line-height: 1.5em;
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	height: 100%;
 }
 
 .wrapper img {
-    width: 550px;
 	display: flex;
 	margin: 0 auto;
 }
 
+main {
+	flex: 1;
+}
 h1 {
 	text-align: center;
+	color: #4e2b5e;
 }
 
-a{
+a {
 	text-decoration: none;
 	cursor: pointer;
 }
 
 .body-text a{
-	color: rgb(102, 81, 172);
+	color: rgb(7, 131, 147);
 }
 
 .page-nav {
@@ -62,6 +67,21 @@ a{
 	color: rgb(102, 81, 172);
 }
 
+.page-nav a:hover {
+	text-decoration: none;
+	color: rgb(149, 113, 184);
+	background-color: #bad4fa8e;
+}
+
+a.to-top {
+	color: rgb(102, 81, 172);
+}
+
+a:hover.to-top {
+	text-decoration: none;
+	color: rgb(149, 113, 184);
+}
+
 .site-nav {
 	display: flex;
     flex-direction: row;
@@ -69,14 +89,15 @@ a{
     align-items: center;
     column-gap: 4px;
 	text-transform: uppercase;
-	font-size: 25px;
-	padding: 4px;
+	font-size: 30px;
+	padding: 10px;
 }
 
-.site-nav a.logo {
+.site-nav img {
+	width: 140px;
 	position: absolute;
-	top: 4px;
-	left: 8px;
+	left: 10px;
+	top: 2px;
 }
 
 .site-nav a {
@@ -88,17 +109,19 @@ a{
 	color: inherit;
 }
 
-.site-nav a.active{
+.site-nav a.active {
     color:rgb(149, 113, 184);
     background-color: white;
 }
 
-.site-nav a:hover{
+.site-nav a:hover {
 	color: rgb(149, 113, 184);
+	text-decoration: none;
 }
 
 a:hover {
-	color: rgb(149, 113, 184);
+	color: rgb(27, 179, 200);
+	text-decoration: underline;
 }
 
 .gallery {
@@ -112,7 +135,6 @@ a:hover {
 }
 
 .gallery img {
-	width: 300px;
 	border-radius: 8px;
 	box-shadow: 0px 0px 3px 3px #cad4e691;
 }
@@ -132,6 +154,8 @@ a:hover {
 	border-spacing: 0;
 	border-radius: 3px;
 	line-height: 1.15em;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .c-table table th{
@@ -176,4 +200,53 @@ a:hover {
 	font-size: 16px;
 }
 
+.ab-img {
+	float: right;
+	margin: 0 0 10px 10px;
+}
 
+footer {
+	min-height: 80px;
+	height: 80px;
+	background: #262645;
+    color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	box-shadow: 0 1px 8px 2px #29364c91;
+}
+
+li {
+	list-style: none;
+}
+
+.arc-list li {
+	list-style-type: square;
+}
+
+.arc-foot {
+	min-height: 27vh;
+}
+
+.lead-bg {
+	width: 100%;
+    height: auto;
+    background: url(twp-pictures/lead-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 0px;
+	box-shadow: 0 1px 8px 2px #29364c91;
+}
+
+.lead-text {
+	background-color: #342645bf;
+	margin: 0 auto;
+	padding: 15px;
+	width: 500px;
+	border-radius: 8px;
+}
