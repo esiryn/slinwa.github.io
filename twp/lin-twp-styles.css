@@ -250,3 +250,7 @@ li {
 	width: 500px;
 	border-radius: 8px;
 }
+
+h1.spec-head {
+	color: white;
+}
