@@ -2,40 +2,49 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-header {
+header, footer {
     height: 70px;
     min-width: 100%;
 	max-width: 300%;
     background: #3f2267;
     color: white;
-	display: block;
 	font-weight: bold;
-	box-shadow: 0 1px 8px 2px #30283b;
+	box-shadow: 0 1px 8px 2px #714f69;
 }
 
 .wrapper {
-	width: 900px;
-	max-width: 1000px;
-	padding: 20px 40px;
+	width: 950px;
+	padding: 0;
 	margin: 0 auto;
 	border: 0px;
 	background: white;
-	box-shadow: 0 5px 8px 2px #30283b;
+	box-shadow: 0 5px 5px 2px #714f69;
 }
 
 body {
 	margin: 0;
-	padding: 0;
 	color: #271f31;
     background: #a199d8;
+	padding-left: 0;
 	font-size: 20px;
 	line-height: 1.5em;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	height: 100%;
 }
 
-h1, h2 {
+main {
+	padding: 0 2em;
+}
+
+h1 {
     line-height: 1.3;
+    font-weight: bolder;
+    text-align: center;
+    color:rgb(10, 42, 110);
+}
+
+.rev {
+	line-height: 1.3;
     font-weight: bolder;
     text-align: center;
     color:rgb(10, 42, 110);
@@ -50,6 +59,10 @@ header a {
     color: inherit;
 }
 
+a {
+	text-decoration: none;
+}
+
 img {
     display: block;
     margin: 0 auto;
@@ -58,4 +71,164 @@ img {
 figcaption {
     text-align: center;
     font-size: 16px;
+}
+
+.site-nav {
+	display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    column-gap: 4px;
+	font-size: 30px;
+	padding: 10px;
+}
+
+/* WRAPPER GRID CSS */
+
+.wrapper-grid {
+	display: grid;
+  	gap: 0.5em 0.5em;
+  	grid-template-columns: repeat(6,1fr);
+  	grid-template-rows: auto auto auto;
+	grid-template-areas:
+            "header header header header header header"
+            "main main main main aside aside"
+            "footer footer footer footer footer footer";
+}
+
+.wrapper-grid .site-header {
+	grid-area: header;
+}
+
+.wrapper-grid .micro-reviews {
+	grid-area: aside;
+	font-size: 16px;
+	line-height: 1.5;
+	padding-top: 1.5em; /* matches page-header padding-top; */
+	padding-right: 2.5em; /* = 40px */
+}
+
+.wrapper-grid main {
+	grid-area: main;
+	padding: 0 2em 0 2.5em;
+}
+
+.wrapper-grid .site-footer {
+	grid-area: footer;
+}
+
+
+/* ARTICLE GRID CSS */
+
+.article-grid {
+	display: grid;
+  	gap: 0.5em 1.5em;
+  	grid-template-columns: repeat(6,1fr);
+  	grid-template-rows: repeat (6,auto);
+	grid-template-areas:
+		"rheader rheader rheader rheader rheader rheader"
+		"rlead rlead rlead rlead raside raside"
+		"rinfo rinfo rinfo rinfo raside raside"
+		"rtext rtext rtext rtext raside raside"
+		"rtext rtext rtext rtext raside raside"
+		"rfooter rfooter rfooter rfooter raside raside"
+           
+}
+
+.article-grid-2 {
+	display: grid;
+  	gap: 0.5em 1.5em;
+  	grid-template-columns: repeat(6,1fr);
+  	grid-template-rows: repeat (6,auto);
+	grid-template-areas:
+		"rheader rheader rheader rheader rheader rheader"
+		"rlead rlead rlead rlead raside1 raside1"
+		"rinfo rinfo rinfo rinfo raside1 raside1"
+		"rtext rtext rtext rtext raside2 raside2"
+		"rtext rtext rtext rtext raside2 raside2"
+		"rfooter rfooter rfooter rfooter raside2 raside2"
+}
+
+.article-grid .review-header, .article-grid-2 .review-header {
+	grid-area: rheader;
+}
+
+.article-grid .review-lead, .article-grid-2 .review-lead {
+	grid-area: rlead;
+}
+
+.article-grid .review-info, .article-grid-2 .review-info {
+	grid-area: rinfo;
+}
+
+.article-grid .review-text, .article-grid-2 .review-text  {
+	grid-area: rtext;
+}
+
+.article-grid .review-footer, .article-grid-2 .review-footer {
+	grid-area: rfooter;
+	font-family: "Courier New", monospace;
+}
+
+.article-grid .review-aside {
+	grid-area: raside;
+}
+
+.article-grid-2 .review-aside-1{
+	grid-area: raside1;
+}
+
+.article-grid-2 .review-aside-2{
+	grid-area: raside2;
+}
+
+
+
+.article-grid .micro-reviews {
+	grid-area: aside;
+	font-size: 16px;
+	line-height: 1.5;
+	padding-top: 1.5em; /* matches page-header padding-top; */
+	padding-right: 2.5em; /* = 40px */
+}
+
+
+
+
+
+/* Other Reviews CSS */
+
+
+.article-label {
+	color: #9a9a9a;
+}
+
+.micro-reviews h1 {
+	font-size: 2em;
+	text-align: left;
+	color: green;
+	margin: 0 0 1em;
+}
+
+.micro-reviews h2 {
+	font-size: 1.5em;
+	color: magenta;
+	margin: 0;
+}
+
+main article {
+	padding: 0 0 2em;
+}
+main article h1 {
+	font-size: 2em;
+	margin: 0 0 1em;
+	color: #3a3a3a;
+}
+
+article figure {
+	margin: 0;
+}
+
+.article-lead-image img {
+	width: 80%;
 }
