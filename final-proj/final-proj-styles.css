@@ -3,17 +3,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 header, footer {
-    height: 70px;
+    height: 60px;
     min-width: 100%;
 	max-width: 300%;
-    background: #3f2267;
+    background: #471759;
     color: white;
 	font-weight: bold;
 	box-shadow: 0 1px 8px 2px #714f69;
 }
 
+.s-header {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.site-nav {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	padding: 15px;
+}
+
+/*.site-nav img {
+	width: 140px;
+	position: absolute;
+	left: 10px;
+	top: 2px;
+}*/
+
+.site-nav a {
+	color: white;
+	padding: 5px;
+}
+
+.site-nav a:visited {	
+	color: inherit;
+}
+
+.site-nav a.active {
+    color:rgb(149, 113, 184);
+    background-color: white;
+}
+
+.site-nav a:hover {
+	color: rgb(149, 113, 184);
+	text-decoration: none;
+}
+
 .wrapper {
-	width: 950px;
+	width: 980px;
 	padding: 0;
 	margin: 0 auto;
 	border: 0px;
@@ -71,16 +112,6 @@ img {
 figcaption {
     text-align: center;
     font-size: 16px;
-}
-
-.site-nav {
-	display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    column-gap: 4px;
-	font-size: 30px;
-	padding: 10px;
 }
 
 /* WRAPPER GRID CSS */
