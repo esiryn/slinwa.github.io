@@ -209,9 +209,88 @@ img {
     margin: 0 auto;
 }
 
-figcaption {
-    text-align: center;
-    font-size: 16px;
+.gallery-1 {
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	gap: 30px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.gallery-1 img {
+	width: 400px;
+  	height: 300px;         
+  	object-fit: contain;   
+  	background: #ece6f0; 
+	box-shadow: 0 0 2px 1px #af94a9;
+}
+
+.gallery-2 {
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto auto;
+  	gap: 30px;
+	max-width: 930px;
+	margin: 0 auto;
+
+	grid-template-areas:
+		"top-left right"
+		"bottom-left right";
+}
+
+.g2p1 {
+	grid-area: top-left;
+}
+
+.g2p1 img {
+	height: 300px;
+	width: 400px;
+}
+
+.g2p2 {
+	grid-area: bottom-left;
+}
+
+.g2p2 img {
+	height: 300px;
+	width: 400px;
+}
+
+.g2p3 {
+	grid-area: right;
+}
+
+.g2p3 img {
+	height: 660px;
+	width: 500px;
+}
+
+.gallery-2 img {
+  	object-fit: contain;   
+  	background: #ece6f0; 
+	box-shadow: 0 0 2px 1px #af94a9;
+}
+
+.gallery-3 {
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	gap: 30px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.gallery-3 img {
+	width: 400px;
+  	height: 300px;         
+  	object-fit: contain;   
+  	background: #ece6f0; 
+	box-shadow: 0 0 2px 1px #af94a9;
+}
+
+.item12 {
+  grid-column: 1 / -1; 
+  justify-self: center;
+  max-width: 400px; 
 }
 
 /* WRAPPER GRID CSS */
@@ -327,7 +406,7 @@ img {
 figcaption {
 	font-style: italic;
 	opacity: .7;
-	font-size: 12px;
+	font-size: 16px;
 	color: #5d327c;
 	text-align: center;
 	margin: 0;
