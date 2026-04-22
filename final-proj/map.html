@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Map</title>
+        <link rel="stylesheet" href="final-proj-styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </head>
+
+    <body>
+        <div class = "wrapper">
+        
+        <header>
+            <div class = "site-nav">
+                <div class = "logo"><a href = "#"><img src = "final-proj-imgs/final-proj-logo.svg"></a></div>
+                <nav class = "site-nav-details">
+                    <a href = "inventory-page.html">Gallery</a>
+                    <a href = "reviews-page.html">Reviews</a>
+                    <a href = "#">Features</a>
+                    <a class = "active" href = "#">Map</a>
+                    <a href = "#">About</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1>Map</h1>
+            <h2 class = "rev">An Overview of Different Drawing Locations</h2>
+
+            <br> 
+
+            <div class="map-container" id = "map-pic">
+                <div class="location-list" id="list">
+                </div>
+                <div id="map"></div>
+            </div>
+
+            <div class = "map-descript">
+                <div class = "location-group">
+                    <h2 id = "fuzhou">Fuzhou, China</h2>
+                    <h3>Childhood Apartment</h3>
+                        <p>text</p>
+                </div>
+
+                <br>
+
+                <div class = "location-group">
+                    <h2 id = "brooklyn">Brooklyn, New York</h2>
+                    <h3>Old NY House</h3>
+                        <p>text</p>
+                    <h3>P.S. 105</h3>
+                        <p>text</p>
+                </div>
+
+                <br>
+
+                <div class = "location-group">
+                    <h2 id = "hamilton">Hamilton, New Jersey</h2>
+                    <h3>Current House</h3>
+                        <p>text</p>
+                    <h3>China Wok</h3>
+                        <p>text</p>
+                    <h3>Hamilton High West</h3>
+                        <p>text</p>
+                </div>
+
+                <br>
+
+                <div class = "location-group">
+                    <h2 id = "nb">New Brunswick, New Jersey</h2>
+                        <p>text</p>
+                    <h3>Quad Three Residence Hall</h3>
+                        <p>text</p>
+                    <h3>Off-Campus House</h3>
+                        <p>text</p>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>© 2026 Rebloom Studio. All rights reserved.</p>
+        </footer>
+
+        </div>
+        <script>
+             const locations = [
+                
+                {city: "Fuzhou, China",
+                    name: "Childhood Apartment",
+                    lat: 26.074,
+                    lng: 119.296,
+                    image: "img",
+                    description: "text"},
+
+                {city: "Brooklyn, NY",
+                    name: "Old NY House",
+                    lat: 40.633,
+                    lng: -74.003,
+                    description: "text"},
+
+                {city: "Brooklyn, NY",
+                    name: "P.S. 105",
+                    lat: 40.630,
+                    lng: -74.006,
+                    description: "text"},
+
+                {city: "Hamilton, NJ",
+                    name: "Current House",
+                    lat: 40.195,
+                    lng: -74.713,
+                    description: "text"},
+
+                {city: "Hamilton, NJ",
+                    name: "China Wok",
+                    lat: 40.206,
+                    lng: -74.712,
+                    description: "text"},
+
+                {city: "Hamilton, NJ",
+                    name: "Hamilton High West",
+                    lat: 40.199,
+                    lng: -74.723,
+                    description: "text"},
+
+                {city: "New Brunswick, NJ",
+                    name: "Quad Three",
+                    lat: 40.521,
+                    lng: -74.434,
+                    description: "text"},
+
+                {city: "New Brunswick, NJ",
+                    name: "Off-Campus House",
+                    lat: 40.487,
+                    lng: -74.439,
+                    description: "text"}
+             ];
+
+            // map
+            const map = L.map('map').setView([40.273, -74.743], 9.5);
+
+            L.tileLayer(
+                'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+                {
+                attribution: '&copy; OpenStreetMap contributors',
+                opacity: 0.7
+                }
+            ).addTo(map);
+
+            const markers = [];
+
+            locations.forEach(loc => {
+                const marker = L.circleMarker([loc.lat, loc.lng], {
+                radius: 6,
+                fillOpacity: 0.8}).addTo(map)
+                .bindPopup(
+                    `<div class = "map-popup">
+                        <b>${loc.name}</b><br>
+                        Rating: ${"⭐".repeat(loc.rating)}<br>
+                        <img src = "${loc.image}" class = "map-popup-img" alt = "placeholder"><br>
+                        ${loc.description}
+                    </div>`);
+                markers.push({ marker, data: loc });
+            });
+
+            // list
+            const listDiv = document.getElementById("list");
+
+            const grouped = {};
+            locations.forEach(loc => {
+                if (!grouped[loc.city]) grouped[loc.city] = [];
+                grouped[loc.city].push(loc);
+            });
+
+            for (const city in grouped) {
+                const cityDiv = document.createElement("div");
+                cityDiv.className = "city";
+
+                const title = document.createElement("div");
+                title.className = "city-title";
+                title.textContent = city;
+
+                // Click city → zoom out to show all in that area
+                title.onclick = () => {
+                const group = grouped[city];
+                const bounds = L.latLngBounds(group.map(l => [l.lat, l.lng]));
+                map.fitBounds(bounds, { padding: [50, 50] });
+                };
+
+                cityDiv.appendChild(title);
+
+                grouped[city].forEach(loc => {
+                const item = document.createElement("div");
+                item.className = "location-item";
+                item.textContent = `• ${loc.name}`;
+
+                item.onclick = () => {
+                    map.flyTo([loc.lat, loc.lng], 14);
+
+                    const found = markers.find(m => m.data === loc);
+                    if (found) {
+                    found.marker.openPopup();
+                    }
+                };
+
+                cityDiv.appendChild(item);
+                });
+
+                listDiv.appendChild(cityDiv);
+            }
+        </script>
+    </body>
+</html>
