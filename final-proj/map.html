@@ -32,8 +32,13 @@
 
             <div class="map-container" id = "map-pic">
                 <div class="location-list" id="list">
+                    <h2>Locations</h3>
                 </div>
                 <div id="map"></div>
+            </div>
+
+            <div class = "intro-map-descript">
+                <p>intro/context here</p>
             </div>
 
             <div class = "map-descript">
@@ -93,49 +98,57 @@
                     lat: 26.074,
                     lng: 119.296,
                     image: "img",
-                    description: "text"},
+                    description: "text",
+                    type: "exploratory"},
 
                 {city: "Brooklyn, NY",
                     name: "Old NY House",
                     lat: 40.633,
                     lng: -74.003,
-                    description: "text"},
+                    description: "text",
+                    type: "exploratory"},
 
                 {city: "Brooklyn, NY",
                     name: "P.S. 105",
                     lat: 40.630,
                     lng: -74.006,
-                    description: "text"},
+                    description: "text",
+                    type: "deliberate"},
 
                 {city: "Hamilton, NJ",
                     name: "Current House",
                     lat: 40.195,
                     lng: -74.713,
-                    description: "text"},
+                    description: "text",
+                    type: "both"},
 
                 {city: "Hamilton, NJ",
                     name: "China Wok",
                     lat: 40.206,
                     lng: -74.712,
-                    description: "text"},
+                    description: "text",
+                    type: "both"},
 
                 {city: "Hamilton, NJ",
                     name: "Hamilton High West",
                     lat: 40.199,
                     lng: -74.723,
-                    description: "text"},
+                    description: "text",
+                    type: "deliberate"},
 
                 {city: "New Brunswick, NJ",
                     name: "Quad Three",
                     lat: 40.521,
                     lng: -74.434,
-                    description: "text"},
+                    description: "text",
+                    type: "exploratory"},
 
                 {city: "New Brunswick, NJ",
                     name: "Off-Campus House",
                     lat: 40.487,
                     lng: -74.439,
-                    description: "text"}
+                    description: "text",
+                    type: "deliberate"}
              ];
 
             // map
@@ -151,10 +164,35 @@
 
             const markers = [];
 
+            const icons = {
+                exploratory: {
+                    icon: L.icon({
+                        iconUrl: "final-proj-imgs/exp-map-pin.png",
+                        iconSize: [30,32]
+                    }),
+                    url: "final-proj-imgs/exp-pin-list.png"
+                },
+
+                deliberate: {
+                    icon: L.icon({
+                        iconUrl: "final-proj-imgs/delib-map-pin.png",
+                        iconSize: [30,32]
+                    }),
+                    url: "final-proj-imgs/delib-pin-list.png"
+                },
+                both: {
+                    icon: L.icon({
+                        iconUrl: "final-proj-imgs/both-map-pin.png",
+                        iconSize: [30,32]
+                    }),
+                    url: "final-proj-imgs/both-pin-list.png"
+                }
+            }
+
             locations.forEach(loc => {
-                const marker = L.circleMarker([loc.lat, loc.lng], {
-                radius: 6,
-                fillOpacity: 0.8}).addTo(map)
+                const marker = L.marker([loc.lat, loc.lng], {
+                    icon: icons[loc.type].icon
+                }).addTo(map)
                 .bindPopup(
                     `<div class = "map-popup">
                         <b>${loc.name}</b><br>
@@ -182,7 +220,7 @@
                 title.className = "city-title";
                 title.textContent = city;
 
-                // Click city → zoom out to show all in that area
+
                 title.onclick = () => {
                 const group = grouped[city];
                 const bounds = L.latLngBounds(group.map(l => [l.lat, l.lng]));
@@ -194,7 +232,11 @@
                 grouped[city].forEach(loc => {
                 const item = document.createElement("div");
                 item.className = "location-item";
-                item.textContent = `• ${loc.name}`;
+                item.innerHTML = 
+                    `<div class = "map-list-row">
+                        <img src = "${icons[loc.type].url}" class = "list-icon">
+                        <span>${loc.name}</span>
+                    </div>`;
 
                 item.onclick = () => {
                     map.flyTo([loc.lat, loc.lng], 14);

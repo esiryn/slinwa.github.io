@@ -578,6 +578,7 @@ figcaption {
     border-right: 1px solid #ddd;
     background: #fafafa;
 	font-size: 16px;
+	align-items: flex-start;
 }
 
 .location-list h2 {
@@ -596,10 +597,11 @@ figcaption {
 }
 
 .location-item {
-    margin-left: 10px;
+
     cursor: pointer;
     padding: 5px;
     border-radius: 6px;
+	text-align: left;
 }
 
 .location-item:hover {
@@ -613,8 +615,22 @@ figcaption {
 }
 
 .map-popup-img {
-  width: 100%;
-  height: auto;
-  margin: 6px 0;
-  border-radius: 6px;
+	width: 100%;
+	height: auto;
+  	margin: 6px 0;
+	border-radius: 6px;
 }
+
+.map-list-row {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: flex-start;
+}
+
+.list-icon {
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+}
+
