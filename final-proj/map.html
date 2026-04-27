@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Map</title>
         <link rel="stylesheet" href="final-proj-styles.css">
+        <script src="https://kit.fontawesome.com/16955ad46f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     </head>
@@ -19,7 +20,7 @@
                     <a href = "reviews-page.html">Reviews</a>
                     <a href = "#">Features</a>
                     <a class = "active" href = "#">Map</a>
-                    <a href = "#">About</a>
+                    <a href = "final-about.html">About</a>
                 </nav>
             </div>
         </header>
@@ -35,51 +36,169 @@
                     <h2>Locations</h3>
                 </div>
                 <div id="map"></div>
+                <div class = "map-legend">
+                    <table>
+                        <tr>
+                            <th colspan = "2">Legend</th>
+                        </tr>
+                        <tr>
+                            <td><img src = "final-proj-imgs/delib-pin-list.png" alt = "map-pin-1"></td>
+                            <td>Deliberate</td>
+                        </tr>
+                        <tr>
+                            <td><img src = "final-proj-imgs/exp-pin-list.png" alt = "map-pin-2"></td>
+                            <td>Exploratory</td>
+                        </tr>
+                        <tr>
+                            <td><img src = "final-proj-imgs/both-pin-list.png" alt = "map-pin-3"></td>
+                            <td>Both</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+            
 
             <div class = "intro-map-descript">
-                <p>intro/context here</p>
+                <p class = "map-caption"><i>(Click each region name to show the markers for that region, or click each individual location name to fly to that location.)</i></p>
+                <p>This page contains information about different locations I have drawn at and how I feel about each experience now (where my ratings are based entirely on such feelings rather than concrete standards), explained in more detail in chronological order below.</p>
+                <p>Each location is marked as either "deliberate", "exploratory", or "both", where "deliberate" means structured drawing and completed pieces, "exploratory" means experimenting and looser sketches, and "both" is...both.</p>
+                <p>This is somewhat of a prelude to my current state with drawing since it discusses my different sources of inspirations over time.</p>
             </div>
+
+            <p><a href = "#map" class = "to-top">Return to Map</a></p>
+
+            <br>
 
             <div class = "map-descript">
                 <div class = "location-group">
-                    <h2 id = "fuzhou">Fuzhou, China</h2>
-                    <h3>Childhood Apartment</h3>
-                        <p>text</p>
+                    <h2>Fuzhou, China</h2>
+                    <h3 id = "loc1">Childhood Apartment
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/fuzhou-edited.jpg" alt = "fuzhou">
+                            <figcaption>Source: <a href = "https://commons.wikimedia.org/wiki/File:Vanguard_20160201_165207.jpg" target = "_blank">Qa003qa003</a>, Creative Commons, via Wikimedia Commons</figcaption>
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p>I was born in the U.S., but I am a “satellite baby”, so I spent the first few years of my life in Fuzhou, China. As a result, this became the place where I first picked up a pencil and started drawing, around two or three years old. My memories of the apartment my grandparents lived in are a bit blurry, but I do recall the period as quite carefree for my artistic expression. This was when I had the least amount of mental constraints and self-criticism when it came to drawing.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <p><a href = "#map" class = "to-top">Return to Map</a></p>
 
                 <br>
 
                 <div class = "location-group">
-                    <h2 id = "brooklyn">Brooklyn, New York</h2>
-                    <h3>Old NY House</h3>
-                        <p>text</p>
-                    <h3>P.S. 105</h3>
-                        <p>text</p>
+                    <h2>Brooklyn, New York</h2>
+                    <h3 id = "loc2">Old NY House
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/old-house-edited.jpg" alt = "ny-house">
+                            <figcaption>Source: <a href = "https://commons.wikimedia.org/wiki/File:Wolfe-NWM-Brownstone-2.jpg" target = "_blank">WFinch</a>, Creative Commons, via Wikimedia Commons</figcaption>
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p>After leaving China, my brother and I were moved permanently to Brooklyn, New York. This isn’t the first house we moved to in New York, but it is the most memorable because I stayed here the longest. At this time, I was still relatively new to drawing, but I was old enough to start experimenting with coloring supplies, which was quite novel back then. </p>
+                        </div>
+                    </div>
+
+                    <h3 id = "loc3">P.S. 105
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/school-edited.png" alt = "ny-school">
+                            <figcaption>Source: <a href = "https://commons.wikimedia.org/wiki/File:Cristo_Rey_New_York_High_School_building.png" target = "_blank">PeteyBell</a>, Creative Commons, via Wikimedia Commons</figcaption>
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p>My experience at this school is similar to my drawing experience at the “Old House”, since this is the elementary school I attended while living in New York. The difference is that rather than having core memories of drawing here, I vividly remember climbing up a thousand flights of stairs every morning instead. When I did draw at school, they were all for my assignments, and I disliked being told what to draw, even back then.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <p><a href = "#map" class = "to-top">Return to Map</a></p>
 
                 <br>
 
                 <div class = "location-group">
-                    <h2 id = "hamilton">Hamilton, New Jersey</h2>
-                    <h3>Current House</h3>
-                        <p>text</p>
-                    <h3>China Wok</h3>
-                        <p>text</p>
-                    <h3>Hamilton High West</h3>
-                        <p>text</p>
+                    <h2>Hamilton, New Jersey</h2>
+                    <h3 id = "loc4">Current House
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/current-house-edited.jpg" alt = "current-house">
+                        </figure>
+                        <div class = "indiv-loc-text">  
+                            <p> I spent a lot of time drawing at my current house during COVID, and it was where I started working on my first commissions. I did work on some art assignments at the house as well, but my drawing experience here is a little worse, simply because being able to work on what I want to at times means more frustration when I can’t quite get my ideas down properly.</p>
+                        </div>
+                    </div>
+
+                    <h3 id = "loc5">China Wok
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/china-wok-edited.jpg" alt = "restaurant-pic">
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p>My parents purchased a restaurant in New Jersey, which is the reason for our move. This place was quite literally the first place I stepped into when I got out of the car in New Jersey for the first time. I was excited at first that my parents bought a restaurant, but little did I know I would end up at the restaurant more than at our apartment (our first residence in New Jersey) and later at our house. As a result, I did everything here: interacting with customers, eating, doing my homework, and of course, drawing. Chatter, the sizzling of food, and the ringing of the phone were the background noise here, and I dislike loud, continuous noise. </p>
+                            <p>The only reason this place is receiving a higher rating is that a customer bought me my first drawing tablet, and that marked the beginning of my digital art era, which is quite important to me. Though many customers also complimented my drawings, this was the beginning of my downward spiral, though not nearly as severe yet.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 id = "loc6">Hamilton High West
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/hhw-edited.png" alt = "high-school-pic">
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p>There isn’t much to say about my artwork in high school. Nearly all the ones I completed here were a part of my art class assignments. Though I mentioned that I don’t like being told what to draw, I ended up creating some pieces in media I wasn’t used to, which I was quite proud of. There were also a few assignments here and there that required a more realistic art style, which indirectly benefited my art overall.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <p><a href = "#map" class = "to-top">Return to Map</a></p>
 
                 <br>
 
                 <div class = "location-group">
-                    <h2 id = "nb">New Brunswick, New Jersey</h2>
-                        <p>text</p>
-                    <h3>Quad Three Residence Hall</h3>
-                        <p>text</p>
-                    <h3>Off-Campus House</h3>
-                        <p>text</p>
+                    <h2>New Brunswick, New Jersey</h2>
+                    <h3 id = "loc7">Quad Three Residence Hall
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "final-proj-imgs/quads-edited.jpg" alt = "quads-pic">
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p>At this time, when I started college, I didn’t really draw anymore. I did decide to try to get back into drawing a few months into my first semester, which was somewhat effective for a while. </p>
+                            <p>But unlike all the other locations, my drawing experience was heavily influenced by external factors. The Quads felt like an oven in the summer, and the bathroom on my floor had a gnat infestation. Not to mention, my neighbors were loud, my first roommate was too messy, and someone once threw up on my foot. Even if none of these things had anything to do with drawing, the environment certainly didn’t inspire me to continue to do so.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 id = "loc8">Off-Campus House
+                        <i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-solid fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i><i class="fa-regular fa-star" style="color: rgb(155, 191, 171);"></i>
+                    </h3>
+                    <div class = "indiv-loc">
+                        <figure>
+                            <img src = "" alt = "off-campus-house">
+                        </figure>
+                        <div class = "indiv-loc-text">
+                            <p> Naturally, after my terrible experience with Rutgers dorms my freshman year, I decided to move off-campus, since it is cheaper, and I reasoned that I could have more privacy. With the external problems mostly resolved, I am back to being overly self-critical. I tried to draw again, and any real motivation was short-lived. I did complete some illustrations, but they're all for school assignments.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <p><a href = "#map" class = "to-top">Return to Map</a></p>
+
+                <br>
+
 
             </div>
 
@@ -97,62 +216,85 @@
                     name: "Childhood Apartment",
                     lat: 26.074,
                     lng: 119.296,
-                    image: "img",
-                    description: "text",
-                    type: "exploratory"},
+                    rating: 5,
+                    image: "final-proj-imgs/fuzhou-edited.jpg",
+                    description: " I was born in the U.S., but I am a “satellite baby”, so I spent the first few years of my life in Fuzhou, China. As a result, th",
+                    type: "exploratory",
+                    id: "loc1"},
 
                 {city: "Brooklyn, NY",
                     name: "Old NY House",
                     lat: 40.633,
                     lng: -74.003,
-                    description: "text",
-                    type: "exploratory"},
+                    rating: 4,
+                    image: "final-proj-imgs/old-house-edited.jpg",
+                    description: "After leaving China, my brother and I were moved permanently to Brooklyn, New York. This isn’t the first house we move",
+                    type: "exploratory",
+                    id: "loc2"},
 
                 {city: "Brooklyn, NY",
                     name: "P.S. 105",
                     lat: 40.630,
                     lng: -74.006,
-                    description: "text",
-                    type: "deliberate"},
+                    rating: 2,
+                    image: "final-proj-imgs/school-edited.png",
+                    description: "My experience at this school is similar to my drawing experience at the “Old House”, since this is the elementary schoo",
+                    type: "deliberate",
+                    id: "loc3"},
 
                 {city: "Hamilton, NJ",
                     name: "Current House",
                     lat: 40.195,
                     lng: -74.713,
-                    description: "text",
-                    type: "both"},
+                    rating: 3,
+                    image: "final-proj-imgs/current-house-edited.jpg",
+                    description: "I spent a lot of time drawing at my current house during COVID, and it was where I started working on my first commissions",
+                    type: "both",
+                    id: "loc4"},
 
                 {city: "Hamilton, NJ",
                     name: "China Wok",
                     lat: 40.206,
                     lng: -74.712,
-                    description: "text",
-                    type: "both"},
+                    rating: 3,
+                    image: "final-proj-imgs/china-wok-edited.jpg",
+                    description: "My parents purchased a restaurant in New Jersey, which is the reason for our move. This place was quite literal",
+                    type: "both",
+                    id: "loc5"},
 
                 {city: "Hamilton, NJ",
                     name: "Hamilton High West",
                     lat: 40.199,
                     lng: -74.723,
-                    description: "text",
-                    type: "deliberate"},
+                    rating: 4,
+                    image: "final-proj-imgs/hhw-edited.png",
+                    description: "There isn’t much to say about my artwork in high school. Nearly all the ones I completed here were a part of my art class a",
+                    type: "deliberate",
+                    id: "loc6"},
 
                 {city: "New Brunswick, NJ",
                     name: "Quad Three",
                     lat: 40.521,
                     lng: -74.434,
-                    description: "text",
-                    type: "exploratory"},
+                    rating: 1,
+                    image: "final-proj-imgs/quads-edited.jpg",
+                    description: "At this time, when I started college, I didn’t really draw anymore. I did decide to try to get back into drawing a f",
+                    type: "exploratory",
+                    id: "loc7"},
 
                 {city: "New Brunswick, NJ",
                     name: "Off-Campus House",
                     lat: 40.487,
                     lng: -74.439,
-                    description: "text",
-                    type: "deliberate"}
+                    rating: 2,
+                    image: "placeholder",
+                    description: "Naturally, after my terrible experience with Rutgers dorms my freshman year, I decided to move off-campus, since it is",
+                    type: "deliberate",
+                    id: "loc8"}
              ];
 
             // map
-            const map = L.map('map').setView([40.273, -74.743], 9.5);
+            const map = L.map('map').setView([40.35, -74.55], 9.5);
 
             L.tileLayer(
                 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -168,7 +310,7 @@
                 exploratory: {
                     icon: L.icon({
                         iconUrl: "final-proj-imgs/exp-map-pin.png",
-                        iconSize: [30,32]
+                        iconSize: [28,32]
                     }),
                     url: "final-proj-imgs/exp-pin-list.png"
                 },
@@ -176,14 +318,14 @@
                 deliberate: {
                     icon: L.icon({
                         iconUrl: "final-proj-imgs/delib-map-pin.png",
-                        iconSize: [30,32]
+                        iconSize: [28,32]
                     }),
                     url: "final-proj-imgs/delib-pin-list.png"
                 },
                 both: {
                     icon: L.icon({
                         iconUrl: "final-proj-imgs/both-map-pin.png",
-                        iconSize: [30,32]
+                        iconSize: [28,32]
                     }),
                     url: "final-proj-imgs/both-pin-list.png"
                 }
@@ -196,10 +338,15 @@
                 .bindPopup(
                     `<div class = "map-popup">
                         <b>${loc.name}</b><br>
-                        Rating: ${"⭐".repeat(loc.rating)}<br>
-                        <img src = "${loc.image}" class = "map-popup-img" alt = "placeholder"><br>
-                        ${loc.description}
-                    </div>`);
+                        Rating: ${"★".repeat(loc.rating)}<br>
+                        <img src = "${loc.image}" class = "map-popup-img" alt = "placeholder">
+                        ${loc.description}...<a href = "#${loc.id}" class = "read-more">Read more</a>
+                    </div>`,
+                    {
+                        minWidth: 200,
+                        maxWidth: 200
+                    }
+                );
                 markers.push({ marker, data: loc });
             });
 
