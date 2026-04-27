@@ -720,3 +720,45 @@ figcaption {
 	color: #1a7188;
 	text-decoration: underline;
 }
+
+/*about page*/
+.team-section {
+	margin-bottom: 50px;
+}
+
+.team-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+}
+
+.team-card img {
+	width: 300px;
+}
+
+.team-text {
+	flex: 1;
+}
+
+.team-text h4 {
+	margin-top: 0;
+}
+
+.timeline {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.timeline-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+}
+
+.timeline-card h3 {
+	width: 200px; 
+}
+
+.timeline-text {
+	flex: 1;
+}
