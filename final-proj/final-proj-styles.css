@@ -746,10 +746,12 @@ figcaption {
 	display: flex;
 	align-items: flex-start;
 	gap: 16px;
+	margin: 20px 0;
 }
 
 .team-card img {
 	width: 300px;
+	outline: 1px solid purple;
 }
 
 .team-text {
@@ -758,6 +760,21 @@ figcaption {
 
 .team-text h4 {
 	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.team-text b {
+	color: rgb(68, 114, 89)
+}
+
+.team-text p {
+	margin-top: 0;
+}
+
+.socials {
+	font-size: 30px;
+	margin-top: 10px;
+	color: rgb(68, 114, 89);
 }
 
 .timeline {
@@ -767,14 +784,24 @@ figcaption {
 
 .timeline-card {
 	display: flex;
-	align-items: flex-start;
 	gap: 16px;
-}
-
-.timeline-card h3 {
-	width: 200px; 
+	align-items: center;
 }
 
 .timeline-text {
 	flex: 1;
 }
+
+.timeline-text h3 {
+	margin-bottom: 0;
+}
+
+.timeline-text p {
+	margin-top: 0;
+}
+.tl-img img {
+	width: 150px;
+	padding: 25px;
+	
+}
+
