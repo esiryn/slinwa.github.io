@@ -174,7 +174,6 @@ h2, h3, h5 {
 	font-size: 18px;
 	outline: 1px solid purple;
 	box-shadow: 0 0 3px 1px #af94a9;
-	
 }
 
 .sum {
@@ -675,30 +674,38 @@ figcaption {
 
 .map-caption {
 	opacity: .7;
-	font-size: 16px;
+	font-size: 11.9px;
 	color: #5d327c;
 	text-align: center;
 	margin: 0;
 }
 
-.indiv-loc {
+.indiv-loc, .inspo-card {
 	display: flex;
 	align-items: flex-start;
 	gap: 16px;
 	margin-bottom: 40px;
 }
 
-.indiv-loc img {
-	width: 350px;
+.indiv-loc img, .inspo-card img {
 	padding: 0;
 	margin: 0;
+	box-shadow: 0 0 3px 1px #af94a9;
 }
 
-.indiv-loc-text {
+.indiv-loc img {
+	width: 350px;
+}
+
+.inspo-card img {
+	width: 300px;
+}
+
+.indiv-loc-text, .inspo-text {
 	flex: 1;
 }
 
-.indiv-loc-text p {
+.indiv-loc-text p, .inspo-text p {
 	padding: 0;
 	margin: 0;
 }
@@ -712,13 +719,22 @@ figcaption {
 	max-width: 350px;
 }
 
-.indiv-loc a {
+.indiv-loc a, .inspo-card a {
 	color: #299dbd;
 }
 
-.indiv-loc a:hover {
+.indiv-loc a:hover, .inspo-card a:hover {
 	color: #1a7188;
 	text-decoration: underline;
+}
+
+.inspo-card {
+	background-color: rgb(226, 203, 248);
+	padding: 15px;
+	border-radius: 10px;
+	font-size: 18px;
+	outline: 1px solid purple;
+	
 }
 
 /*about page*/
