@@ -805,3 +805,107 @@ figcaption {
 	
 }
 
+/*home page*/
+.home-lead {
+	margin-left: calc(50% - 50vw);
+	width: 100vw;
+	position: relative;
+}
+
+.home-lead img{
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.home-lead-text {
+	position: absolute;
+	width: 400px;
+	top: 105px;
+	right: 270px;
+	padding: 100px;
+	color: white;
+	border-radius: 999px;
+	background: radial-gradient(
+		ellipse, 
+		rgba(112, 70, 160, 0.8) 0%,
+		rgba(77, 70, 160, 0.4) 40%,
+		rgba(180, 210, 240, 0) 70%    
+  );
+}
+
+.home-lead-text h1 {
+	margin-bottom: 5px;
+	font-size: 100px;
+	color: white;
+}
+
+.home-lead-text p {
+	text-align: center;
+	margin: 0;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.showcase {
+	margin: 2em 0;
+}
+
+.showcase h2 {
+	text-align: center;
+}
+
+.showcase-cards {
+	display: flex;
+	gap: 25px;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.showcase-card-indiv {
+	flex: 1;
+	background: rgb(226, 203, 248);
+	padding: 20px;
+	border-radius: 12px;
+	border: solid 1px #412957a6;
+	color: #412957;
+	box-shadow: 0 0 2px 1px #af94a99e;
+}
+
+.showcase-card-indiv img {
+  	width: 100%;
+  	height: 180px;
+  	object-fit: cover;
+  	border-radius: 8px;
+  	margin-bottom: 10px;
+}
+
+.showcase-card-indiv h3 {
+  	margin: 10px 0 6px;
+	text-align: center;
+}
+
+.showcase-card-indiv p {
+  	font-size: 16px;
+  	opacity: 0.85;
+  	margin-bottom: 12px;
+	text-align: center;
+}
+
+.button {
+	display: block;
+	width: fit-content;
+	padding: 8px 14px;
+	border: solid 1px #412957a6;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	transition: 0.2s ease;
+	margin: 0 auto;
+	background: #5d327ce1;
+}
+
+/*.button:hover {
+	background: #a855f7;
+	border-color: #a855f7;
+}*/
